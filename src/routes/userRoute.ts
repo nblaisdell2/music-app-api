@@ -11,6 +11,10 @@ export async function userRoutes(fastify: FastifyInstance) {
     return { hello: "goodbye" };
   });
 
+  fastify.post("/callback", async (req, reply) => {
+    return { msg: "Got data", data: req.body }
+  })
+
   fastify.post<{ Body: { username: string }; Reply: User[] }>(
     "/new_user",
     async (req, reply) => {
