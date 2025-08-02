@@ -1,0 +1,7 @@
+.env
+.env.local
+.env.prod
+.git/
+.gitignore
+Dockerfile
+.terraform/
